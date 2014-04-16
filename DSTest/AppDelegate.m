@@ -53,6 +53,13 @@ END:VCALENDAR";
     
     CGICalendarObject *obj = [cal objectAtIndex:0];
     NSLog(@"%ld     %ld     %ld     %ld", [[obj events] count], [[obj todos] count] , [[obj timezones] count], [[obj freebusies] count]);
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receviveFromDeamon:)
+                                                 name:@"com.lcl.demo.deamonpost" object:nil];
+}
+
+- (void) receviveFromDeamon:(NSNotification *) nitif {
+    NSLog(@"receive from deamon");
 }
 
 @end

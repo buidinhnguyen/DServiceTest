@@ -18,6 +18,16 @@
 		7746EC5818FCD3F000A4FCEA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7746EC3718FCD3F000A4FCEA /* Cocoa.framework */; };
 		7746EC6018FCD3F000A4FCEA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7746EC5E18FCD3F000A4FCEA /* InfoPlist.strings */; };
 		7746EC6218FCD3F000A4FCEA /* DSTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7746EC6118FCD3F000A4FCEA /* DSTestTests.m */; };
+		7746EC8B18FE57EB00A4FCEA /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7746EC8A18FE57EB00A4FCEA /* EventKit.framework */; };
+		7797765D18FE624100A1AB8B /* CGICalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7797764E18FE624100A1AB8B /* CGICalendar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7797765E18FE624100A1AB8B /* CGICalendarComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7797765018FE624100A1AB8B /* CGICalendarComponent.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7797765F18FE624100A1AB8B /* CGICalendarContentLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 7797765218FE624100A1AB8B /* CGICalendarContentLine.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7797766018FE624100A1AB8B /* CGICalendarObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7797765418FE624100A1AB8B /* CGICalendarObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7797766118FE624100A1AB8B /* CGICalendarParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7797765618FE624100A1AB8B /* CGICalendarParameter.m */; };
+		7797766218FE624100A1AB8B /* CGICalendarProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 7797765818FE624100A1AB8B /* CGICalendarProperty.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7797766318FE624100A1AB8B /* CGICalendarValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 7797765A18FE624100A1AB8B /* CGICalendarValue.m */; };
+		7797766418FE624100A1AB8B /* NSDate+CGICalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7797765C18FE624100A1AB8B /* NSDate+CGICalendar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7797766618FE69DD00A1AB8B /* school.ics in Resources */ = {isa = PBXBuildFile; fileRef = 7797766518FE69DD00A1AB8B /* school.ics */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +60,24 @@
 		7746EC5D18FCD3F000A4FCEA /* DSTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DSTestTests-Info.plist"; sourceTree = "<group>"; };
 		7746EC5F18FCD3F000A4FCEA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7746EC6118FCD3F000A4FCEA /* DSTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSTestTests.m; sourceTree = "<group>"; };
+		7746EC8A18FE57EB00A4FCEA /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		7797764D18FE624100A1AB8B /* CGICalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGICalendar.h; sourceTree = "<group>"; };
+		7797764E18FE624100A1AB8B /* CGICalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGICalendar.m; sourceTree = "<group>"; };
+		7797764F18FE624100A1AB8B /* CGICalendarComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGICalendarComponent.h; sourceTree = "<group>"; };
+		7797765018FE624100A1AB8B /* CGICalendarComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGICalendarComponent.m; sourceTree = "<group>"; };
+		7797765118FE624100A1AB8B /* CGICalendarContentLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGICalendarContentLine.h; sourceTree = "<group>"; };
+		7797765218FE624100A1AB8B /* CGICalendarContentLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGICalendarContentLine.m; sourceTree = "<group>"; };
+		7797765318FE624100A1AB8B /* CGICalendarObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGICalendarObject.h; sourceTree = "<group>"; };
+		7797765418FE624100A1AB8B /* CGICalendarObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGICalendarObject.m; sourceTree = "<group>"; };
+		7797765518FE624100A1AB8B /* CGICalendarParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGICalendarParameter.h; sourceTree = "<group>"; };
+		7797765618FE624100A1AB8B /* CGICalendarParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGICalendarParameter.m; sourceTree = "<group>"; };
+		7797765718FE624100A1AB8B /* CGICalendarProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGICalendarProperty.h; sourceTree = "<group>"; };
+		7797765818FE624100A1AB8B /* CGICalendarProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGICalendarProperty.m; sourceTree = "<group>"; };
+		7797765918FE624100A1AB8B /* CGICalendarValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGICalendarValue.h; sourceTree = "<group>"; };
+		7797765A18FE624100A1AB8B /* CGICalendarValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGICalendarValue.m; sourceTree = "<group>"; };
+		7797765B18FE624100A1AB8B /* NSDate+CGICalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CGICalendar.h"; sourceTree = "<group>"; };
+		7797765C18FE624100A1AB8B /* NSDate+CGICalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CGICalendar.m"; sourceTree = "<group>"; };
+		7797766518FE69DD00A1AB8B /* school.ics */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = school.ics; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7746EC8B18FE57EB00A4FCEA /* EventKit.framework in Frameworks */,
 				7746EC3818FCD3F000A4FCEA /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,6 +124,7 @@
 		7746EC3618FCD3F000A4FCEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7746EC8A18FE57EB00A4FCEA /* EventKit.framework */,
 				7746EC3718FCD3F000A4FCEA /* Cocoa.framework */,
 				7746EC5618FCD3F000A4FCEA /* XCTest.framework */,
 				7746EC3918FCD3F000A4FCEA /* Other Frameworks */,
@@ -115,6 +145,8 @@
 		7746EC3D18FCD3F000A4FCEA /* DSTest */ = {
 			isa = PBXGroup;
 			children = (
+				7797766518FE69DD00A1AB8B /* school.ics */,
+				7797764C18FE624100A1AB8B /* iCalObjCSDK */,
 				7746EC4918FCD3F000A4FCEA /* AppDelegate.h */,
 				7746EC4A18FCD3F000A4FCEA /* AppDelegate.m */,
 				7746EC4C18FCD3F000A4FCEA /* MainMenu.xib */,
@@ -152,6 +184,29 @@
 				7746EC5E18FCD3F000A4FCEA /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7797764C18FE624100A1AB8B /* iCalObjCSDK */ = {
+			isa = PBXGroup;
+			children = (
+				7797764D18FE624100A1AB8B /* CGICalendar.h */,
+				7797764E18FE624100A1AB8B /* CGICalendar.m */,
+				7797764F18FE624100A1AB8B /* CGICalendarComponent.h */,
+				7797765018FE624100A1AB8B /* CGICalendarComponent.m */,
+				7797765118FE624100A1AB8B /* CGICalendarContentLine.h */,
+				7797765218FE624100A1AB8B /* CGICalendarContentLine.m */,
+				7797765318FE624100A1AB8B /* CGICalendarObject.h */,
+				7797765418FE624100A1AB8B /* CGICalendarObject.m */,
+				7797765518FE624100A1AB8B /* CGICalendarParameter.h */,
+				7797765618FE624100A1AB8B /* CGICalendarParameter.m */,
+				7797765718FE624100A1AB8B /* CGICalendarProperty.h */,
+				7797765818FE624100A1AB8B /* CGICalendarProperty.m */,
+				7797765918FE624100A1AB8B /* CGICalendarValue.h */,
+				7797765A18FE624100A1AB8B /* CGICalendarValue.m */,
+				7797765B18FE624100A1AB8B /* NSDate+CGICalendar.h */,
+				7797765C18FE624100A1AB8B /* NSDate+CGICalendar.m */,
+			);
+			path = iCalObjCSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +287,7 @@
 			files = (
 				7746EC4218FCD3F000A4FCEA /* InfoPlist.strings in Resources */,
 				7746EC5018FCD3F000A4FCEA /* Images.xcassets in Resources */,
+				7797766618FE69DD00A1AB8B /* school.ics in Resources */,
 				7746EC4818FCD3F000A4FCEA /* Credits.rtf in Resources */,
 				7746EC4E18FCD3F000A4FCEA /* MainMenu.xib in Resources */,
 			);
@@ -252,8 +308,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7797765F18FE624100A1AB8B /* CGICalendarContentLine.m in Sources */,
 				7746EC4B18FCD3F000A4FCEA /* AppDelegate.m in Sources */,
+				7797766218FE624100A1AB8B /* CGICalendarProperty.m in Sources */,
+				7797765E18FE624100A1AB8B /* CGICalendarComponent.m in Sources */,
 				7746EC4418FCD3F000A4FCEA /* main.m in Sources */,
+				7797766118FE624100A1AB8B /* CGICalendarParameter.m in Sources */,
+				7797766318FE624100A1AB8B /* CGICalendarValue.m in Sources */,
+				7797766018FE624100A1AB8B /* CGICalendarObject.m in Sources */,
+				7797766418FE624100A1AB8B /* NSDate+CGICalendar.m in Sources */,
+				7797765D18FE624100A1AB8B /* CGICalendar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +528,7 @@
 				7746EC6718FCD3F000A4FCEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7746EC6818FCD3F000A4FCEA /* Build configuration list for PBXNativeTarget "DSTestTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +537,7 @@
 				7746EC6A18FCD3F000A4FCEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

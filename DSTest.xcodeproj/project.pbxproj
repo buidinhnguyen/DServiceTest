@@ -28,6 +28,15 @@
 		7797766318FE624100A1AB8B /* CGICalendarValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 7797765A18FE624100A1AB8B /* CGICalendarValue.m */; };
 		7797766418FE624100A1AB8B /* NSDate+CGICalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7797765C18FE624100A1AB8B /* NSDate+CGICalendar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7797766618FE69DD00A1AB8B /* school.ics in Resources */ = {isa = PBXBuildFile; fileRef = 7797766518FE69DD00A1AB8B /* school.ics */; };
+		A28888A118FE754800A4F403 /* abc.txt in Resources */ = {isa = PBXBuildFile; fileRef = A28888A018FE754800A4F403 /* abc.txt */; };
+		A2AC6EEA1904B51B00677310 /* SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2AC6EE81904B51A00677310 /* SampleViewController.m */; };
+		A2AC6EEB1904B51B00677310 /* SampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2AC6EE91904B51B00677310 /* SampleViewController.xib */; };
+		A2AC6EEE1904CAB900677310 /* CalendarObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A2AC6EED1904CAB900677310 /* CalendarObject.m */; };
+		A2AC6EF41904D33D00677310 /* postinstall.sh in Resources */ = {isa = PBXBuildFile; fileRef = A2AC6EF21904D33D00677310 /* postinstall.sh */; };
+		A2AC6EF61904D3B100677310 /* stopinstall.sh in Resources */ = {isa = PBXBuildFile; fileRef = A2AC6EF51904D3B100677310 /* stopinstall.sh */; };
+		A2AC6EF81904D44D00677310 /* TestDaemon in Resources */ = {isa = PBXBuildFile; fileRef = A2AC6EF71904D44D00677310 /* TestDaemon */; };
+		A2AC6EFA1904EE4100677310 /* com.lcl.TestDaemon.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2AC6EF91904EE4100677310 /* com.lcl.TestDaemon.plist */; };
+		A2AC6EFD1904F62C00677310 /* ColoredView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2AC6EFC1904F62C00677310 /* ColoredView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +87,18 @@
 		7797765B18FE624100A1AB8B /* NSDate+CGICalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CGICalendar.h"; sourceTree = "<group>"; };
 		7797765C18FE624100A1AB8B /* NSDate+CGICalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CGICalendar.m"; sourceTree = "<group>"; };
 		7797766518FE69DD00A1AB8B /* school.ics */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = school.ics; sourceTree = "<group>"; };
+		A28888A018FE754800A4F403 /* abc.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = abc.txt; sourceTree = "<group>"; };
+		A2AC6EE71904B51A00677310 /* SampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleViewController.h; sourceTree = "<group>"; };
+		A2AC6EE81904B51A00677310 /* SampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleViewController.m; sourceTree = "<group>"; };
+		A2AC6EE91904B51B00677310 /* SampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SampleViewController.xib; sourceTree = "<group>"; };
+		A2AC6EEC1904CAB900677310 /* CalendarObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarObject.h; sourceTree = "<group>"; };
+		A2AC6EED1904CAB900677310 /* CalendarObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarObject.m; sourceTree = "<group>"; };
+		A2AC6EF21904D33D00677310 /* postinstall.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = postinstall.sh; sourceTree = "<group>"; };
+		A2AC6EF51904D3B100677310 /* stopinstall.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = stopinstall.sh; sourceTree = "<group>"; };
+		A2AC6EF71904D44D00677310 /* TestDaemon */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = TestDaemon; sourceTree = "<group>"; };
+		A2AC6EF91904EE4100677310 /* com.lcl.TestDaemon.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = com.lcl.TestDaemon.plist; sourceTree = "<group>"; };
+		A2AC6EFB1904F62C00677310 /* ColoredView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColoredView.h; sourceTree = "<group>"; };
+		A2AC6EFC1904F62C00677310 /* ColoredView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColoredView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +126,17 @@
 		7746EC2B18FCD3F000A4FCEA = {
 			isa = PBXGroup;
 			children = (
+				A2AC6EFB1904F62C00677310 /* ColoredView.h */,
+				A2AC6EFC1904F62C00677310 /* ColoredView.m */,
+				A2AC6EF91904EE4100677310 /* com.lcl.TestDaemon.plist */,
+				A2AC6EF71904D44D00677310 /* TestDaemon */,
+				A2AC6EF21904D33D00677310 /* postinstall.sh */,
+				A2AC6EF51904D3B100677310 /* stopinstall.sh */,
+				A2AC6EEC1904CAB900677310 /* CalendarObject.h */,
+				A2AC6EED1904CAB900677310 /* CalendarObject.m */,
+				A2AC6EE71904B51A00677310 /* SampleViewController.h */,
+				A2AC6EE81904B51A00677310 /* SampleViewController.m */,
+				A2AC6EE91904B51B00677310 /* SampleViewController.xib */,
 				7746EC3D18FCD3F000A4FCEA /* DSTest */,
 				7746EC5B18FCD3F000A4FCEA /* DSTestTests */,
 				7746EC3618FCD3F000A4FCEA /* Frameworks */,
@@ -152,6 +184,7 @@
 				7746EC4C18FCD3F000A4FCEA /* MainMenu.xib */,
 				7746EC4F18FCD3F000A4FCEA /* Images.xcassets */,
 				7746EC3E18FCD3F000A4FCEA /* Supporting Files */,
+				A28888A018FE754800A4F403 /* abc.txt */,
 			);
 			path = DSTest;
 			sourceTree = "<group>";
@@ -285,10 +318,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2AC6EFA1904EE4100677310 /* com.lcl.TestDaemon.plist in Resources */,
+				A2AC6EF41904D33D00677310 /* postinstall.sh in Resources */,
+				A2AC6EF81904D44D00677310 /* TestDaemon in Resources */,
 				7746EC4218FCD3F000A4FCEA /* InfoPlist.strings in Resources */,
 				7746EC5018FCD3F000A4FCEA /* Images.xcassets in Resources */,
+				A2AC6EEB1904B51B00677310 /* SampleViewController.xib in Resources */,
 				7797766618FE69DD00A1AB8B /* school.ics in Resources */,
+				A28888A118FE754800A4F403 /* abc.txt in Resources */,
 				7746EC4818FCD3F000A4FCEA /* Credits.rtf in Resources */,
+				A2AC6EF61904D3B100677310 /* stopinstall.sh in Resources */,
 				7746EC4E18FCD3F000A4FCEA /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,12 +351,15 @@
 				7746EC4B18FCD3F000A4FCEA /* AppDelegate.m in Sources */,
 				7797766218FE624100A1AB8B /* CGICalendarProperty.m in Sources */,
 				7797765E18FE624100A1AB8B /* CGICalendarComponent.m in Sources */,
+				A2AC6EFD1904F62C00677310 /* ColoredView.m in Sources */,
+				A2AC6EEE1904CAB900677310 /* CalendarObject.m in Sources */,
 				7746EC4418FCD3F000A4FCEA /* main.m in Sources */,
 				7797766118FE624100A1AB8B /* CGICalendarParameter.m in Sources */,
 				7797766318FE624100A1AB8B /* CGICalendarValue.m in Sources */,
 				7797766018FE624100A1AB8B /* CGICalendarObject.m in Sources */,
 				7797766418FE624100A1AB8B /* NSDate+CGICalendar.m in Sources */,
 				7797765D18FE624100A1AB8B /* CGICalendar.m in Sources */,
+				A2AC6EEA1904B51B00677310 /* SampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

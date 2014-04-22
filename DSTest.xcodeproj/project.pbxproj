@@ -28,6 +28,7 @@
 		7797766318FE624100A1AB8B /* CGICalendarValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 7797765A18FE624100A1AB8B /* CGICalendarValue.m */; };
 		7797766418FE624100A1AB8B /* NSDate+CGICalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7797765C18FE624100A1AB8B /* NSDate+CGICalendar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7797766618FE69DD00A1AB8B /* school.ics in Resources */ = {isa = PBXBuildFile; fileRef = 7797766518FE69DD00A1AB8B /* school.ics */; };
+		A2773922190616B6002C3B7A /* info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2773921190616B6002C3B7A /* info.plist */; };
 		A28888A118FE754800A4F403 /* abc.txt in Resources */ = {isa = PBXBuildFile; fileRef = A28888A018FE754800A4F403 /* abc.txt */; };
 		A2AC6EEA1904B51B00677310 /* SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2AC6EE81904B51A00677310 /* SampleViewController.m */; };
 		A2AC6EEB1904B51B00677310 /* SampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2AC6EE91904B51B00677310 /* SampleViewController.xib */; };
@@ -87,6 +88,8 @@
 		7797765B18FE624100A1AB8B /* NSDate+CGICalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CGICalendar.h"; sourceTree = "<group>"; };
 		7797765C18FE624100A1AB8B /* NSDate+CGICalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CGICalendar.m"; sourceTree = "<group>"; };
 		7797766518FE69DD00A1AB8B /* school.ics */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = school.ics; sourceTree = "<group>"; };
+		A2773921190616B6002C3B7A /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = info.plist; sourceTree = "<group>"; };
+		A277392319061AFC002C3B7A /* DSTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DSTest.entitlements; sourceTree = "<group>"; };
 		A28888A018FE754800A4F403 /* abc.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = abc.txt; sourceTree = "<group>"; };
 		A2AC6EE71904B51A00677310 /* SampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleViewController.h; sourceTree = "<group>"; };
 		A2AC6EE81904B51A00677310 /* SampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleViewController.m; sourceTree = "<group>"; };
@@ -126,6 +129,7 @@
 		7746EC2B18FCD3F000A4FCEA = {
 			isa = PBXGroup;
 			children = (
+				A2773921190616B6002C3B7A /* info.plist */,
 				A2AC6EFB1904F62C00677310 /* ColoredView.h */,
 				A2AC6EFC1904F62C00677310 /* ColoredView.m */,
 				A2AC6EF91904EE4100677310 /* com.lcl.TestDaemon.plist */,
@@ -177,6 +181,7 @@
 		7746EC3D18FCD3F000A4FCEA /* DSTest */ = {
 			isa = PBXGroup;
 			children = (
+				A277392319061AFC002C3B7A /* DSTest.entitlements */,
 				7797766518FE69DD00A1AB8B /* school.ics */,
 				7797764C18FE624100A1AB8B /* iCalObjCSDK */,
 				7746EC4918FCD3F000A4FCEA /* AppDelegate.h */,
@@ -289,6 +294,13 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = LCL;
 				TargetAttributes = {
+					7746EC3318FCD3F000A4FCEA = {
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
 					7746EC5418FCD3F000A4FCEA = {
 						TestTargetID = 7746EC3318FCD3F000A4FCEA;
 					};
@@ -326,6 +338,7 @@
 				A2AC6EEB1904B51B00677310 /* SampleViewController.xib in Resources */,
 				7797766618FE69DD00A1AB8B /* school.ics in Resources */,
 				A28888A118FE754800A4F403 /* abc.txt in Resources */,
+				A2773922190616B6002C3B7A /* info.plist in Resources */,
 				7746EC4818FCD3F000A4FCEA /* Credits.rtf in Resources */,
 				A2AC6EF61904D3B100677310 /* stopinstall.sh in Resources */,
 				7746EC4E18FCD3F000A4FCEA /* MainMenu.xib in Resources */,
@@ -489,6 +502,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DSTest/DSTest-Prefix.pch";
@@ -502,6 +516,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DSTest/DSTest-Prefix.pch";

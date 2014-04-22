@@ -3,15 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>KeepAlive</key>
-	<false/>
+	<true/>
 	<key>Label</key>
 	<string>com.lcl.TestDaemon</string>
 	<key>ProgramArguments</key>
 	<array>
-		<string>/Users/Thuc/Documents/DServiceTest/TestDaemon</string>
+		<string>/usr/local/bin/TestDaemon</string>
 	</array>
-	<key>QueueDirectories</key>
-	<array/>
 	<key>RunAtLoad</key>
 	<true/>
 	<key>WatchPaths</key>

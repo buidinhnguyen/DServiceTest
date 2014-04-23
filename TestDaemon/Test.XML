@@ -1,0 +1,159 @@
+Printing description of responseText:
+<?xml version="1.0" encoding="utf-8"?>
+<d:multistatus xmlns:d="DAV:" xmlns:s="http://sabredav.org/ns" xmlns:cal="urn:ietf:params:xml:ns:caldav" xmlns:cs="http://calendarserver.org/ns/"><d:response><d:href>/calendarserver.php/calendars/trihien.nguyen%40leftcoastlogic.com/f70dede05c0572ae7ac50275f9d3e64c/1F51213C-DB87-4563-84D9-844BB67756D2.ics</d:href><d:propstat><d:prop><cal:calendar-data>BEGIN:VCALENDAR
+    VERSION:2.0
+    PRODID:-//Apple Inc.//Mac OS X 10.9.2//EN
+    CALSCALE:GREGORIAN
+    BEGIN:VTIMEZONE
+    TZID:Asia/Ho_Chi_Minh
+    BEGIN:STANDARD
+    TZOFFSETFROM:+0800
+    DTSTART:19310501T000000
+    TZNAME:GMT+7
+    TZOFFSETTO:+0700
+    RDATE:19310501T000000
+    END:STANDARD
+    END:VTIMEZONE
+    BEGIN:VEVENT
+    CREATED:20140421T093517Z
+    UID:1F51213C-DB87-4563-84D9-844BB67756D2
+    DTEND;TZID=Asia/Ho_Chi_Minh:20140422T143000
+    TRANSP:OPAQUE
+    SUMMARY:Thêm sự kiện
+    DTSTART;TZID=Asia/Ho_Chi_Minh:20140422T133000
+    DTSTAMP:20140421T093532Z
+    SEQUENCE:2
+    DESCRIPTION:Mô tả
+    END:VEVENT
+    END:VCALENDAR
+</cal:calendar-data><d:getetag>"bc1378f5f4c20edbce3164529062c45a"</d:getetag></d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response><d:response><d:href>/calendarserver.php/calendars/trihien.nguyen%40leftcoastlogic.com/f70dede05c0572ae7ac50275f9d3e64c/22E3DC59-6992-46B8-B721-E3D20797A543.ics</d:href><d:propstat><d:prop><cal:calendar-data>BEGIN:VCALENDAR
+    VERSION:2.0
+    PRODID:-//Apple Inc.//Mac OS X 10.9.2//EN
+    CALSCALE:GREGORIAN
+    BEGIN:VTIMEZONE
+    TZID:Asia/Ho_Chi_Minh
+    BEGIN:STANDARD
+    TZOFFSETFROM:+0800
+    DTSTART:19310501T000000
+    TZNAME:GMT+7
+    TZOFFSETTO:+0700
+    RDATE:19310501T000000
+    END:STANDARD
+    END:VTIMEZONE
+    BEGIN:VEVENT
+    CREATED:20140421T093336Z
+    UID:22E3DC59-6992-46B8-B721-E3D20797A543
+    DTEND;TZID=Asia/Ho_Chi_Minh:20140423T140000
+    TRANSP:OPAQUE
+    SUMMARY:LCL
+    DTSTART;TZID=Asia/Ho_Chi_Minh:20140423T124500
+    DTSTAMP:20140421T093354Z
+    LOCATION:Hồ văn huê
+    SEQUENCE:2
+    END:VEVENT
+    END:VCALENDAR
+</cal:calendar-data><d:getetag>"4ed2fd4f59ad66c24e6bb3dc1c0f24f1"</d:getetag></d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response><d:response><d:href>/calendarserver.php/calendars/trihien.nguyen%40leftcoastlogic.com/f70dede05c0572ae7ac50275f9d3e64c/2a549164f479c2cad1d041c4fd696817.ics</d:href><d:propstat><d:prop><cal:calendar-data>BEGIN:VCALENDAR
+    PRODID;X-RICAL-TZSOURCE=TZINFO:mysmartday.com
+    CALSCALE:GREGORIAN
+    VERSION:2.0
+    BEGIN:VTIMEZONE
+    TZID;X-RICAL-TZSOURCE=TZINFO:America/Chicago
+    BEGIN:DAYLIGHT
+    DTSTART:20140309T020000
+    RDATE:20140309T020000
+    TZOFFSETFROM:-0600
+    TZOFFSETTO:-0500
+    TZNAME:CDT
+    END:DAYLIGHT
+    END:VTIMEZONE
+    BEGIN:VTODO
+    CREATED;VALUE=DATE-TIME:20140415T135158Z
+    DTSTART;TZID=America/Chicago;VALUE=DATE-TIME:20140415T085158
+    UID:2a549164f479c2cad1d041c4fd696817.ics
+    DESCRIPTION:
+    URL:
+    SUMMARY:Welcome to SmartDay! To get started\, tap this Task to reveal the
+    attached note...
+    LOCATION:
+    SEQUENCE:2
+    END:VTODO
+    END:VCALENDAR
+</cal:calendar-data><d:getetag>"2a549164f479c2cad1d041c4fd696817"</d:getetag></d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response><d:response><d:href>/calendarserver.php/calendars/trihien.nguyen%40leftcoastlogic.com/f70dede05c0572ae7ac50275f9d3e64c/635F9BF4-7281-464D-9FF6-0BEAC0E214BA.ics</d:href><d:propstat><d:prop><cal:calendar-data>BEGIN:VCALENDAR
+    VERSION:2.0
+    PRODID:-//Apple Inc.//Mac OS X 10.9.2//EN
+    CALSCALE:GREGORIAN
+    BEGIN:VTIMEZONE
+    TZID:Asia/Ho_Chi_Minh
+    BEGIN:STANDARD
+    TZOFFSETFROM:+0800
+    DTSTART:19310501T000000
+    TZNAME:GMT+7
+    TZOFFSETTO:+0700
+    RDATE:19310501T000000
+    END:STANDARD
+    END:VTIMEZONE
+    BEGIN:VEVENT
+    CREATED:20140421T093437Z
+    UID:635F9BF4-7281-464D-9FF6-0BEAC0E214BA
+    DTEND;TZID=Asia/Ho_Chi_Minh:20140422T130000
+    TRANSP:OPAQUE
+    SUMMARY:Test afternoon
+    DTSTART;TZID=Asia/Ho_Chi_Minh:20140422T121500
+    DTSTAMP:20140421T093449Z
+    SEQUENCE:1
+    END:VEVENT
+    END:VCALENDAR
+</cal:calendar-data><d:getetag>"e26b7f2b891470745f88fdf570954a36"</d:getetag></d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response><d:response><d:href>/calendarserver.php/calendars/trihien.nguyen%40leftcoastlogic.com/f70dede05c0572ae7ac50275f9d3e64c/8601eda682210f9826887601d00cb09c.ics</d:href><d:propstat><d:prop><cal:calendar-data>BEGIN:VCALENDAR
+    PRODID;X-RICAL-TZSOURCE=TZINFO:mysmartday.com
+    CALSCALE:GREGORIAN
+    VERSION:2.0
+    BEGIN:VTIMEZONE
+    TZID;X-RICAL-TZSOURCE=TZINFO:America/Chicago
+    BEGIN:DAYLIGHT
+    DTSTART:20140309T020000
+    RDATE:20140309T020000
+    TZOFFSETFROM:-0600
+    TZOFFSETTO:-0500
+    TZNAME:CDT
+    END:DAYLIGHT
+    END:VTIMEZONE
+    BEGIN:VEVENT
+    CREATED;VALUE=DATE-TIME:20140415T135158Z
+    DTEND;TZID=America/Chicago;VALUE=DATE-TIME:20140415T095158
+    DTSTART;TZID=America/Chicago;VALUE=DATE-TIME:20140415T085158
+    UID:8601eda682210f9826887601d00cb09c.ics
+    DESCRIPTION:
+    URL:
+    SUMMARY:Welcome to SmartDay! In this Calendar view\, Events appear on the
+    left\, and Tasks are automatically scheduled for you on the right.
+    LOCATION:
+    SEQUENCE:2
+    END:VEVENT
+    END:VCALENDAR
+</cal:calendar-data><d:getetag>"8601eda682210f9826887601d00cb09c"</d:getetag></d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response><d:response><d:href>/calendarserver.php/calendars/trihien.nguyen%40leftcoastlogic.com/f70dede05c0572ae7ac50275f9d3e64c/event1.ics</d:href><d:propstat><d:prop><cal:calendar-data>BEGIN:VCALENDAR
+    PRODID:-//Example Corp.//CalDAV Client//EN
+    CALSCALE:GREGORIAN
+    VERSION:2.0
+    X-WR-TIMEZONE:Asia/Saigon
+    BEGIN:VTIMEZONE
+    TZID:Asia/Saigon
+    X-LIC-LOCATION:Asia/Saigon
+    BEGIN:STANDARD
+    TZOFFSETFROM:+0700
+    TZOFFSETTO:+0700
+    DTSTART:19310501T000000
+    TZNAME:ICT
+    RDATE:19310501T000000
+    END:STANDARD
+    END:VTIMEZONE
+    BEGIN:VEVENT
+    UID:event1
+    DTSTAMP:20140314T080000Z
+    DTSTART:20140315T080000Z
+    DTEND:20140315T190000Z
+    DESCRIPTION:Testing at the meeting!
+    SUMMARY:NEW XXXX EVENT
+    END:VEVENT
+    END:VCALENDAR
+</cal:calendar-data><d:getetag>"ebf1ada6b4212dd650d75c8be392f0aa"</d:getetag></d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response></d:multistatus>
+(lldb)

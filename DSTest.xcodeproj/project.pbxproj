@@ -31,26 +31,6 @@
 		A2773922190616B6002C3B7A /* info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2773921190616B6002C3B7A /* info.plist */; };
 		A28888A118FE754800A4F403 /* abc.txt in Resources */ = {isa = PBXBuildFile; fileRef = A28888A018FE754800A4F403 /* abc.txt */; };
 		A28C69B019075CC500B66ED1 /* CalendarObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A28C69AF19075CC500B66ED1 /* CalendarObject.m */; };
-		A28C69E319076BAE00B66ED1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A28C69B619076BAE00B66ED1 /* AppDelegate.m */; };
-		A28C69E419076BAE00B66ED1 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = A28C69B919076BAE00B66ED1 /* ASIAuthenticationDialog.m */; };
-		A28C69E519076BAE00B66ED1 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = A28C69BC19076BAE00B66ED1 /* ASIDataCompressor.m */; };
-		A28C69E619076BAE00B66ED1 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = A28C69BE19076BAE00B66ED1 /* ASIDataDecompressor.m */; };
-		A28C69E719076BAE00B66ED1 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A28C69C019076BAE00B66ED1 /* ASIDownloadCache.m */; };
-		A28C69E819076BAE00B66ED1 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A28C69C219076BAE00B66ED1 /* ASIFormDataRequest.m */; };
-		A28C69E919076BAE00B66ED1 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A28C69C419076BAE00B66ED1 /* ASIHTTPRequest.m */; };
-		A28C69EA19076BAE00B66ED1 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = A28C69C819076BAE00B66ED1 /* ASIInputStream.m */; };
-		A28C69EB19076BAE00B66ED1 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A28C69CA19076BAE00B66ED1 /* ASINetworkQueue.m */; };
-		A28C69EC19076BAE00B66ED1 /* CalendarObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A28C69CD19076BAE00B66ED1 /* CalendarObject.m */; };
-		A28C69ED19076BAE00B66ED1 /* com.lcl.TestDaemon.plist in Resources */ = {isa = PBXBuildFile; fileRef = A28C69CE19076BAE00B66ED1 /* com.lcl.TestDaemon.plist */; };
-		A28C69EE19076BAE00B66ED1 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = A28C69D019076BAE00B66ED1 /* Common.m */; };
-		A28C69EF19076BAE00B66ED1 /* postinstall.sh in Resources */ = {isa = PBXBuildFile; fileRef = A28C69D119076BAE00B66ED1 /* postinstall.sh */; };
-		A28C69F019076BAE00B66ED1 /* libParsingLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A28C69D319076BAE00B66ED1 /* libParsingLib.a */; };
-		A28C69F119076BAE00B66ED1 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A28C69D519076BAE00B66ED1 /* NSDataAdditions.m */; };
-		A28C69F219076BAE00B66ED1 /* TBXML+Compression.m in Sources */ = {isa = PBXBuildFile; fileRef = A28C69D719076BAE00B66ED1 /* TBXML+Compression.m */; };
-		A28C69F319076BAE00B66ED1 /* TBXML+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = A28C69D919076BAE00B66ED1 /* TBXML+HTTP.m */; };
-		A28C69F419076BAE00B66ED1 /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = A28C69DB19076BAE00B66ED1 /* TBXML.m */; };
-		A28C69F519076BAE00B66ED1 /* Test.XML in Resources */ = {isa = PBXBuildFile; fileRef = A28C69DC19076BAE00B66ED1 /* Test.XML */; };
-		A28C69F619076BAE00B66ED1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A28C69DE19076BAE00B66ED1 /* main.m */; };
 		A2AC6EEA1904B51B00677310 /* SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2AC6EE81904B51A00677310 /* SampleViewController.m */; };
 		A2AC6EEB1904B51B00677310 /* SampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2AC6EE91904B51B00677310 /* SampleViewController.xib */; };
 		A2AC6EF41904D33D00677310 /* postinstall.sh in Resources */ = {isa = PBXBuildFile; fileRef = A2AC6EF21904D33D00677310 /* postinstall.sh */; };
@@ -67,9 +47,9 @@
 			remoteGlobalIDString = 7746EC3318FCD3F000A4FCEA;
 			remoteInfo = DSTest;
 		};
-		A28C69F819076BAE00B66ED1 /* PBXContainerItemProxy */ = {
+		A28C6A3E1907704D00B66ED1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A28C69E019076BAE00B66ED1 /* TestDaemon.xcodeproj */;
+			containerPortal = A28C6A261907704C00B66ED1 /* TestDaemon.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = A23B53F318FD113A00F78A56;
 			remoteInfo = TestDaemon;
@@ -119,47 +99,7 @@
 		A28888A018FE754800A4F403 /* abc.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = abc.txt; sourceTree = "<group>"; };
 		A28C69AE19075CC500B66ED1 /* CalendarObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarObject.h; sourceTree = "<group>"; };
 		A28C69AF19075CC500B66ED1 /* CalendarObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarObject.m; sourceTree = "<group>"; };
-		A28C69B519076BAE00B66ED1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		A28C69B619076BAE00B66ED1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A28C69B819076BAE00B66ED1 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
-		A28C69B919076BAE00B66ED1 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
-		A28C69BA19076BAE00B66ED1 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
-		A28C69BB19076BAE00B66ED1 /* ASIDataCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataCompressor.h; sourceTree = "<group>"; };
-		A28C69BC19076BAE00B66ED1 /* ASIDataCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataCompressor.m; sourceTree = "<group>"; };
-		A28C69BD19076BAE00B66ED1 /* ASIDataDecompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataDecompressor.h; sourceTree = "<group>"; };
-		A28C69BE19076BAE00B66ED1 /* ASIDataDecompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataDecompressor.m; sourceTree = "<group>"; };
-		A28C69BF19076BAE00B66ED1 /* ASIDownloadCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDownloadCache.h; sourceTree = "<group>"; };
-		A28C69C019076BAE00B66ED1 /* ASIDownloadCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDownloadCache.m; sourceTree = "<group>"; };
-		A28C69C119076BAE00B66ED1 /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIFormDataRequest.h; sourceTree = "<group>"; };
-		A28C69C219076BAE00B66ED1 /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIFormDataRequest.m; sourceTree = "<group>"; };
-		A28C69C319076BAE00B66ED1 /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequest.h; sourceTree = "<group>"; };
-		A28C69C419076BAE00B66ED1 /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIHTTPRequest.m; sourceTree = "<group>"; };
-		A28C69C519076BAE00B66ED1 /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestConfig.h; sourceTree = "<group>"; };
-		A28C69C619076BAE00B66ED1 /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestDelegate.h; sourceTree = "<group>"; };
-		A28C69C719076BAE00B66ED1 /* ASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIInputStream.h; sourceTree = "<group>"; };
-		A28C69C819076BAE00B66ED1 /* ASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIInputStream.m; sourceTree = "<group>"; };
-		A28C69C919076BAE00B66ED1 /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINetworkQueue.h; sourceTree = "<group>"; };
-		A28C69CA19076BAE00B66ED1 /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINetworkQueue.m; sourceTree = "<group>"; };
-		A28C69CB19076BAE00B66ED1 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
-		A28C69CC19076BAE00B66ED1 /* CalendarObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarObject.h; sourceTree = "<group>"; };
-		A28C69CD19076BAE00B66ED1 /* CalendarObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarObject.m; sourceTree = "<group>"; };
-		A28C69CE19076BAE00B66ED1 /* com.lcl.TestDaemon.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = com.lcl.TestDaemon.plist; sourceTree = "<group>"; };
-		A28C69CF19076BAE00B66ED1 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
-		A28C69D019076BAE00B66ED1 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
-		A28C69D119076BAE00B66ED1 /* postinstall.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = postinstall.sh; sourceTree = "<group>"; };
-		A28C69D319076BAE00B66ED1 /* libParsingLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libParsingLib.a; sourceTree = "<group>"; };
-		A28C69D419076BAE00B66ED1 /* NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAdditions.h; sourceTree = "<group>"; };
-		A28C69D519076BAE00B66ED1 /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataAdditions.m; sourceTree = "<group>"; };
-		A28C69D619076BAE00B66ED1 /* TBXML+Compression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TBXML+Compression.h"; sourceTree = "<group>"; };
-		A28C69D719076BAE00B66ED1 /* TBXML+Compression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TBXML+Compression.m"; sourceTree = "<group>"; };
-		A28C69D819076BAE00B66ED1 /* TBXML+HTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TBXML+HTTP.h"; sourceTree = "<group>"; };
-		A28C69D919076BAE00B66ED1 /* TBXML+HTTP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TBXML+HTTP.m"; sourceTree = "<group>"; };
-		A28C69DA19076BAE00B66ED1 /* TBXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBXML.h; sourceTree = "<group>"; };
-		A28C69DB19076BAE00B66ED1 /* TBXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBXML.m; sourceTree = "<group>"; };
-		A28C69DC19076BAE00B66ED1 /* Test.XML */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Test.XML; sourceTree = "<group>"; };
-		A28C69DE19076BAE00B66ED1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A28C69DF19076BAE00B66ED1 /* TestDaemon-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestDaemon-Prefix.pch"; sourceTree = "<group>"; };
-		A28C69E019076BAE00B66ED1 /* TestDaemon.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = TestDaemon.xcodeproj; sourceTree = "<group>"; };
+		A28C6A261907704C00B66ED1 /* TestDaemon.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = TestDaemon.xcodeproj; sourceTree = "<group>"; };
 		A2AC6EE71904B51A00677310 /* SampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleViewController.h; sourceTree = "<group>"; };
 		A2AC6EE81904B51A00677310 /* SampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleViewController.m; sourceTree = "<group>"; };
 		A2AC6EE91904B51B00677310 /* SampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SampleViewController.xib; sourceTree = "<group>"; };
@@ -177,7 +117,6 @@
 			files = (
 				7746EC8B18FE57EB00A4FCEA /* EventKit.framework in Frameworks */,
 				7746EC3818FCD3F000A4FCEA /* Cocoa.framework in Frameworks */,
-				A28C69F019076BAE00B66ED1 /* libParsingLib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,7 +135,7 @@
 		7746EC2B18FCD3F000A4FCEA = {
 			isa = PBXGroup;
 			children = (
-				A28C69B419076BAE00B66ED1 /* TestDaemon */,
+				A28C69FA1907704C00B66ED1 /* TestDaemon */,
 				A28C69AE19075CC500B66ED1 /* CalendarObject.h */,
 				A28C69AF19075CC500B66ED1 /* CalendarObject.m */,
 				A2773921190616B6002C3B7A /* info.plist */,
@@ -314,82 +253,18 @@
 			path = iCalObjCSDK;
 			sourceTree = "<group>";
 		};
-		A28C69B419076BAE00B66ED1 /* TestDaemon */ = {
+		A28C69FA1907704C00B66ED1 /* TestDaemon */ = {
 			isa = PBXGroup;
 			children = (
-				A28C69B519076BAE00B66ED1 /* AppDelegate.h */,
-				A28C69B619076BAE00B66ED1 /* AppDelegate.m */,
-				A28C69B719076BAE00B66ED1 /* ASIHttpRequest */,
-				A28C69CC19076BAE00B66ED1 /* CalendarObject.h */,
-				A28C69CD19076BAE00B66ED1 /* CalendarObject.m */,
-				A28C69CE19076BAE00B66ED1 /* com.lcl.TestDaemon.plist */,
-				A28C69CF19076BAE00B66ED1 /* Common.h */,
-				A28C69D019076BAE00B66ED1 /* Common.m */,
-				A28C69D119076BAE00B66ED1 /* postinstall.sh */,
-				A28C69D219076BAE00B66ED1 /* TBXML */,
-				A28C69DC19076BAE00B66ED1 /* Test.XML */,
-				A28C69DD19076BAE00B66ED1 /* TestDaemon */,
-				A28C69E019076BAE00B66ED1 /* TestDaemon.xcodeproj */,
+				A28C6A261907704C00B66ED1 /* TestDaemon.xcodeproj */,
 			);
 			path = TestDaemon;
 			sourceTree = "<group>";
 		};
-		A28C69B719076BAE00B66ED1 /* ASIHttpRequest */ = {
+		A28C6A271907704C00B66ED1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A28C69B819076BAE00B66ED1 /* ASIAuthenticationDialog.h */,
-				A28C69B919076BAE00B66ED1 /* ASIAuthenticationDialog.m */,
-				A28C69BA19076BAE00B66ED1 /* ASICacheDelegate.h */,
-				A28C69BB19076BAE00B66ED1 /* ASIDataCompressor.h */,
-				A28C69BC19076BAE00B66ED1 /* ASIDataCompressor.m */,
-				A28C69BD19076BAE00B66ED1 /* ASIDataDecompressor.h */,
-				A28C69BE19076BAE00B66ED1 /* ASIDataDecompressor.m */,
-				A28C69BF19076BAE00B66ED1 /* ASIDownloadCache.h */,
-				A28C69C019076BAE00B66ED1 /* ASIDownloadCache.m */,
-				A28C69C119076BAE00B66ED1 /* ASIFormDataRequest.h */,
-				A28C69C219076BAE00B66ED1 /* ASIFormDataRequest.m */,
-				A28C69C319076BAE00B66ED1 /* ASIHTTPRequest.h */,
-				A28C69C419076BAE00B66ED1 /* ASIHTTPRequest.m */,
-				A28C69C519076BAE00B66ED1 /* ASIHTTPRequestConfig.h */,
-				A28C69C619076BAE00B66ED1 /* ASIHTTPRequestDelegate.h */,
-				A28C69C719076BAE00B66ED1 /* ASIInputStream.h */,
-				A28C69C819076BAE00B66ED1 /* ASIInputStream.m */,
-				A28C69C919076BAE00B66ED1 /* ASINetworkQueue.h */,
-				A28C69CA19076BAE00B66ED1 /* ASINetworkQueue.m */,
-				A28C69CB19076BAE00B66ED1 /* ASIProgressDelegate.h */,
-			);
-			path = ASIHttpRequest;
-			sourceTree = "<group>";
-		};
-		A28C69D219076BAE00B66ED1 /* TBXML */ = {
-			isa = PBXGroup;
-			children = (
-				A28C69D319076BAE00B66ED1 /* libParsingLib.a */,
-				A28C69D419076BAE00B66ED1 /* NSDataAdditions.h */,
-				A28C69D519076BAE00B66ED1 /* NSDataAdditions.m */,
-				A28C69D619076BAE00B66ED1 /* TBXML+Compression.h */,
-				A28C69D719076BAE00B66ED1 /* TBXML+Compression.m */,
-				A28C69D819076BAE00B66ED1 /* TBXML+HTTP.h */,
-				A28C69D919076BAE00B66ED1 /* TBXML+HTTP.m */,
-				A28C69DA19076BAE00B66ED1 /* TBXML.h */,
-				A28C69DB19076BAE00B66ED1 /* TBXML.m */,
-			);
-			path = TBXML;
-			sourceTree = "<group>";
-		};
-		A28C69DD19076BAE00B66ED1 /* TestDaemon */ = {
-			isa = PBXGroup;
-			children = (
-				A28C69DE19076BAE00B66ED1 /* main.m */,
-				A28C69DF19076BAE00B66ED1 /* TestDaemon-Prefix.pch */,
-			);
-			path = TestDaemon;
-			sourceTree = "<group>";
-		};
-		A28C69E119076BAE00B66ED1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A28C69F919076BAE00B66ED1 /* TestDaemon */,
+				A28C6A3F1907704D00B66ED1 /* TestDaemon */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -466,8 +341,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = A28C69E119076BAE00B66ED1 /* Products */;
-					ProjectRef = A28C69E019076BAE00B66ED1 /* TestDaemon.xcodeproj */;
+					ProductGroup = A28C6A271907704C00B66ED1 /* Products */;
+					ProjectRef = A28C6A261907704C00B66ED1 /* TestDaemon.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -479,11 +354,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		A28C69F919076BAE00B66ED1 /* TestDaemon */ = {
+		A28C6A3F1907704D00B66ED1 /* TestDaemon */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
 			path = TestDaemon;
-			remoteRef = A28C69F819076BAE00B66ED1 /* PBXContainerItemProxy */;
+			remoteRef = A28C6A3E1907704D00B66ED1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -493,8 +368,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A28C69ED19076BAE00B66ED1 /* com.lcl.TestDaemon.plist in Resources */,
-				A28C69F519076BAE00B66ED1 /* Test.XML in Resources */,
 				A2AC6EFA1904EE4100677310 /* com.lcl.TestDaemon.plist in Resources */,
 				A2AC6EF41904D33D00677310 /* postinstall.sh in Resources */,
 				7746EC4218FCD3F000A4FCEA /* InfoPlist.strings in Resources */,
@@ -502,7 +375,6 @@
 				A2AC6EEB1904B51B00677310 /* SampleViewController.xib in Resources */,
 				7797766618FE69DD00A1AB8B /* school.ics in Resources */,
 				A28888A118FE754800A4F403 /* abc.txt in Resources */,
-				A28C69EF19076BAE00B66ED1 /* postinstall.sh in Resources */,
 				A2773922190616B6002C3B7A /* info.plist in Resources */,
 				7746EC4818FCD3F000A4FCEA /* Credits.rtf in Resources */,
 				A2AC6EF61904D3B100677310 /* stopinstall.sh in Resources */,
@@ -526,34 +398,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				7797765F18FE624100A1AB8B /* CGICalendarContentLine.m in Sources */,
-				A28C69E619076BAE00B66ED1 /* ASIDataDecompressor.m in Sources */,
 				7746EC4B18FCD3F000A4FCEA /* AppDelegate.m in Sources */,
-				A28C69E519076BAE00B66ED1 /* ASIDataCompressor.m in Sources */,
 				7797766218FE624100A1AB8B /* CGICalendarProperty.m in Sources */,
-				A28C69F619076BAE00B66ED1 /* main.m in Sources */,
 				7797765E18FE624100A1AB8B /* CGICalendarComponent.m in Sources */,
-				A28C69F119076BAE00B66ED1 /* NSDataAdditions.m in Sources */,
-				A28C69E819076BAE00B66ED1 /* ASIFormDataRequest.m in Sources */,
 				A2AC6EFD1904F62C00677310 /* ColoredView.m in Sources */,
-				A28C69EB19076BAE00B66ED1 /* ASINetworkQueue.m in Sources */,
 				7746EC4418FCD3F000A4FCEA /* main.m in Sources */,
-				A28C69E319076BAE00B66ED1 /* AppDelegate.m in Sources */,
-				A28C69EC19076BAE00B66ED1 /* CalendarObject.m in Sources */,
-				A28C69F419076BAE00B66ED1 /* TBXML.m in Sources */,
-				A28C69EE19076BAE00B66ED1 /* Common.m in Sources */,
-				A28C69E419076BAE00B66ED1 /* ASIAuthenticationDialog.m in Sources */,
 				7797766118FE624100A1AB8B /* CGICalendarParameter.m in Sources */,
 				A28C69B019075CC500B66ED1 /* CalendarObject.m in Sources */,
 				7797766318FE624100A1AB8B /* CGICalendarValue.m in Sources */,
 				7797766018FE624100A1AB8B /* CGICalendarObject.m in Sources */,
-				A28C69E719076BAE00B66ED1 /* ASIDownloadCache.m in Sources */,
-				A28C69F319076BAE00B66ED1 /* TBXML+HTTP.m in Sources */,
 				7797766418FE624100A1AB8B /* NSDate+CGICalendar.m in Sources */,
-				A28C69E919076BAE00B66ED1 /* ASIHTTPRequest.m in Sources */,
 				7797765D18FE624100A1AB8B /* CGICalendar.m in Sources */,
 				A2AC6EEA1904B51B00677310 /* SampleViewController.m in Sources */,
-				A28C69F219076BAE00B66ED1 /* TBXML+Compression.m in Sources */,
-				A28C69EA19076BAE00B66ED1 /* ASIInputStream.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

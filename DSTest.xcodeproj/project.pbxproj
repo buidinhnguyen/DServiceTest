@@ -54,6 +54,13 @@
 			remoteGlobalIDString = A23B53F318FD113A00F78A56;
 			remoteInfo = TestDaemon;
 		};
+		A28C6A4019079A2200B66ED1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A28C6A261907704C00B66ED1 /* TestDaemon.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A23B53F218FD113A00F78A56;
+			remoteInfo = TestDaemon;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -283,6 +290,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				A28C6A4119079A2200B66ED1 /* PBXTargetDependency */,
 			);
 			name = DSTest;
 			productName = DSTest;
@@ -428,6 +436,11 @@
 			isa = PBXTargetDependency;
 			target = 7746EC3318FCD3F000A4FCEA /* DSTest */;
 			targetProxy = 7746EC5918FCD3F000A4FCEA /* PBXContainerItemProxy */;
+		};
+		A28C6A4119079A2200B66ED1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TestDaemon;
+			targetProxy = A28C6A4019079A2200B66ED1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

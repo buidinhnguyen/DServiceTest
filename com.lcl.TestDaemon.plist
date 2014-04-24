@@ -8,7 +8,7 @@
 	<string>com.lcl.TestDaemon</string>
 	<key>ProgramArguments</key>
 	<array>
-		<string>/usr/local/bin/TestDaemon</string>
+		<string>/Users/Thuc/Library/Developer/Xcode/DerivedData/DSTest-cfbhldopansgqgcthofwtbxrqziv/Build/Products/Debug/TestDaemon</string>
 	</array>
 	<key>RunAtLoad</key>
 	<true/>

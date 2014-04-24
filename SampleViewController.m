@@ -8,22 +8,57 @@
 
 #import "SampleViewController.h"
 #import "CalendarObject.h"
+#import "NSDate+CGICalendar.h"
 
 @interface SampleViewController (){
     
     NSTimer *timer;
 }
 
+@property (weak) IBOutlet NSTextField *txtEmail;
+@property (weak) IBOutlet NSTextField *txtPass;
+@property (weak) IBOutlet NSTextField *txtURI;
+
 @property (weak) IBOutlet NSScrollView *tvDisplay;
+@property (weak) IBOutlet NSButton *btnChange;
+@property (weak) IBOutlet NSTextField *lblChangeInfomation;
+
 
 @end
 
 @implementation SampleViewController
 
+- (NSString *) filePathUser{
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDesktopDirectory, NSUserDomainMask, YES);
+    NSString *userPath = [NSString stringWithFormat:@"%@/DB/user.plist", [paths objectAtIndex:0]];
+    
+    return userPath;
+    
+}
+
+- (void) saveInfo{
+    
+    NSString *filePathUser = [self filePathUser];
+    
+    NSMutableDictionary* infoDict = [NSMutableDictionary dictionaryWithContentsOfFile:filePathUser];
+    
+    infoDict = [NSMutableDictionary dictionary];
+    [infoDict setObject:self.txtEmail.stringValue forKey:@"Email"];
+    [infoDict setObject:self.txtPass.stringValue forKey:@"Password"];
+    [infoDict setObject:self.txtURI.stringValue forKey:@"URI"];
+    
+    [infoDict writeToFile:filePathUser atomically:YES];
+    
+    [self.lblChangeInfomation setHidden:YES];
+}
+
 #pragma mark - Method sync Daemon
 
 //Start Daemon
 - (void) startAppleScriptFile{
+    
+    sleep(1.0f);
     
      //Start SH File
      NSString * scriptPath =
@@ -132,15 +167,52 @@
             
             CalendarObject *curCalendarObject = [arrayData objectAtIndex:i];
             
-            NSString *strItem = [NSString stringWithFormat:@"(%d) Descripton: %@\n    Summary: %@", i + 1, curCalendarObject.strDescription.length > 0 ?  curCalendarObject.strDescription : @"(No description)", curCalendarObject.strSummary.length > 0 ? curCalendarObject.strSummary : @"No summary"];
+            NSDate *start = [NSDate dateWithICalendarString:curCalendarObject.strStart];
+            
+            NSString *strStartDate = @"";
+            
+            if (start != nil) {
+                
+                NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+                [dateFormatter setDateFormat:@"MM/dd/yyyy HH:mm"];
+                strStartDate = [dateFormatter stringFromDate:start];
+            }
+            else{
+                
+                NSArray *arraySplit = [curCalendarObject.strStart componentsSeparatedByString:@":"];
+                if (arraySplit.count == 0) {
+                    
+                    strStartDate = curCalendarObject.strStart;
+                }
+                else{
+                    
+                    for (int k = 0; k < arraySplit.count; k++) {
+                        
+                        NSDate *start_ = [NSDate dateWithICalendarString:[arraySplit objectAtIndex:1]];
+                        
+                        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+                        [dateFormatter setDateFormat:@"MM/dd/yyyy HH:mm"];
+                        strStartDate = [dateFormatter stringFromDate:start_];
+                        
+                        //strStartDate = [NSString stringWithFormat:@"%@Z", [arraySplit objectAtIndex:1]];
+                    }
+                }
+
+            }
+            
+            NSString *strItem = [NSString stringWithFormat:@"(%d) Descripton: %@\n    Summary: %@ \n    Date: %@ \n", i + 1, curCalendarObject.strDescription.length > 0 ?  curCalendarObject.strDescription : @"(No description)", curCalendarObject.strSummary.length > 0 ? curCalendarObject.strSummary : @"No summary", strStartDate];
             strDisplayString = strDisplayString.length == 0 ? strItem: [NSString stringWithFormat:@"%@\n\n%@",strDisplayString, strItem];
         }
         
         [self.tvDisplay.documentView setString: strDisplayString];
+        [self.tvDisplay.documentView setTextColor:[NSColor blackColor]];
         
         NSLog(@"%ld", arrayData.count);
     }
     else{
+        
+        [self.tvDisplay.documentView setString: @"No result or error exec"];
+        [self.tvDisplay.documentView setTextColor:[NSColor redColor]];
         NSLog(@"Không có sự kiện");
     }
 }
@@ -149,7 +221,12 @@
     
     [super loadView];
     
-    NSString *pathExecDaemon = [[NSBundle mainBundle] pathForResource:@"TestDaemon" ofType:nil];
+    [self.lblChangeInfomation setHidden:YES];
+    [self.btnChange setTarget:self];
+    [self.btnChange setAction:@selector(saveInfo)];
+    
+    //NSString *pathExecDaemon = [[NSBundle mainBundle] pathForResource:@"TestDaemon" ofType:nil];
+    
     NSString *pathPlistDaemon = [[NSBundle mainBundle] pathForResource:@"com.lcl.TestDaemon.plist" ofType:nil];
 
     NSString * output = nil;
@@ -171,12 +248,14 @@
         [arrayScript addObject: [NSString stringWithFormat:@"'cp' %@ /Library/LaunchAgents", pathPlistDaemon]];
     }
     
+    /*
     BOOL existDaemonBin = [self checkFileExist:@"/usr/local/bin/TestDaemon"];
     
     if (!existDaemonBin) {
         
          [arrayScript addObject: [NSString stringWithFormat:@"'cp' %@ /usr/local/bin", pathExecDaemon]];
     }
+     */
     
     if (arrayScript.count > 0) {
         
@@ -196,6 +275,21 @@
         
         [self startAppleScriptFile];
         timer = [NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(handleTimer:) userInfo:nil repeats:YES];
+    }
+    
+    NSMutableDictionary * infoDict = [NSMutableDictionary dictionaryWithContentsOfFile:[self filePathUser]];
+    
+    if (infoDict != nil) {
+        
+        self.txtEmail.stringValue = [infoDict objectForKey:@"Email"];
+        self.txtPass.stringValue = [infoDict objectForKey:@"Password"];
+        self.txtURI.stringValue = [infoDict objectForKey:@"URI"];
+    }
+    else{
+        
+        self.txtEmail.stringValue = @"trihien.nguyen@leftcoastlogic.com";
+        self.txtPass.stringValue = @"123456789";
+        self.txtURI.stringValue = @"f70dede05c0572ae7ac50275f9d3e64c";
     }
     
     

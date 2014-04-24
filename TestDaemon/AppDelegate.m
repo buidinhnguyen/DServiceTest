@@ -21,7 +21,12 @@
     TBXML *tbXML;
     CalendarObject *calendarObejct;
     NSMutableArray *arrayCalendar;
+    
     MCOIMAPFetchMessagesOperation * op;
+
+    NSString *strEmail;
+    NSString *strURI;
+    NSString *strPassword;
 }
 
 @property (nonatomic, copy) NSString *login;
@@ -72,7 +77,7 @@
     return strSource;
 }
 
-- (NSString *) stringValueFromSource:(NSString *) strSource andKeyBegin:(NSString *) strKeyBegin andKeyEnd:(NSString *) strKeyEnd{
+- (NSString *) stringValueFromSource:(NSString *) strSource andKeyBegin:(NSString *) strKeyBegin andKeyEnd:(NSString *) strKeyEnd andType:(NSString *) typeReplace{
     
     NSString *newSource = strSource;
 
@@ -96,7 +101,17 @@
         return @"";
     
     stringValue = [stringValue stringByReplacingOccurrencesOfString:@"\n" withString:@""];
-    stringValue = [self replaceTODO:stringValue];
+    
+    if ([typeReplace isEqualToString:@"VTODO"]) {
+        
+        stringValue = [self replaceTODO:stringValue];
+    }
+    else if ([typeReplace isEqualToString:@"EVENT"]){
+        
+        stringValue = [self replaceEVENT:stringValue];
+    }
+    
+    
 
     return stringValue;
     
@@ -151,7 +166,7 @@
                 //VTODO
                 if ([calendarObejct.strData rangeOfString:@"BEGIN:VTODO"].location != NSNotFound) {
                     
-                     NSString *stringValue = [self stringValueFromSource:calendarObejct.strData andKeyBegin:@"BEGIN:VTODO" andKeyEnd:@"END:VTODO"];
+                     NSString *stringValue = [self stringValueFromSource:calendarObejct.strData andKeyBegin:@"BEGIN:VTODO" andKeyEnd:@"END:VTODO" andType:@"VTODO"];
                     
                     calendarObejct.strType = @"TODO";
                     
@@ -162,14 +177,17 @@
                     
                     //DESCRIPTION
                     NSString *strDescription = [self getValueFromProperty:@"DESCRIPTION" withStringSource:stringValue];
-                    
                     calendarObejct.strDescription = strDescription;
+                    
+                    //DTSTART
+                    NSString *strStart = [self getValueFromProperty:@"DTSTART" withStringSource:stringValue];
+                    calendarObejct.strStart = strStart;
                     
                 }
                 //EVENT
                 else if ([calendarObejct.strData rangeOfString:@"BEGIN:VEVENT"].location != NSNotFound) {
                     
-                    NSString *stringValue = [self stringValueFromSource:calendarObejct.strData andKeyBegin:@"BEGIN:VEVENT" andKeyEnd:@"END:VEVENT"];
+                    NSString *stringValue = [self stringValueFromSource:calendarObejct.strData andKeyBegin:@"BEGIN:VEVENT" andKeyEnd:@"END:VEVENT" andType:@"EVENT"];
                     
                     calendarObejct.strType = @"EVENT";
                     
@@ -182,6 +200,10 @@
                     NSString *strDescription = [self getValueFromProperty:@"DESCRIPTION" withStringSource:stringValue];
                     
                     calendarObejct.strDescription = strDescription;
+                    
+                    //DTSTART
+                    NSString *strStart = [self getValueFromProperty:@"DTSTART" withStringSource:stringValue];
+                    calendarObejct.strStart = strStart;
                     
                 }
                 
@@ -203,10 +225,7 @@
     __block NSString *strStringHeader = @"";
     __block NSString *strStringDetail = @"";
     
-    NSString *strEmail = @"trihien.nguyen@leftcoastlogic.com";
-    NSString *strUri = @"f70dede05c0572ae7ac50275f9d3e64c";
-    
-    NSString *strUrl = [NSString stringWithFormat: @"http://192.168.1.7:8087/calendarserver.php/calendars/%@/%@", strEmail, strUri];
+    NSString *strUrl = [NSString stringWithFormat: @"http://192.168.1.7:8087/calendarserver.php/calendars/%@/%@", strEmail, strURI];
 
     NSString *strReport = [Common getReportSabri];
     
@@ -219,8 +238,8 @@
     [request setTimeOutSeconds:300];
     [request addRequestHeader:@"Content-Type" value:@"application/xml"];
     [request addRequestHeader:@"Content-Length" value:[NSString stringWithFormat:@"%ld", (long)length]];
-    [request setUsername:@"trihien.nguyen@leftcoastlogic.com"];
-    [request setPassword:@"123456789"];
+    [request setUsername:strEmail];
+    [request setPassword:strPassword];
     
     //Success
     [request setCompletionBlock:^{
@@ -318,11 +337,40 @@
     arrayCalendar = [NSMutableArray array];
     [timer invalidate];
     
+    NSString *filePathUser = [self filePathUser];
+    
+    NSMutableDictionary* infoDict = [NSMutableDictionary dictionaryWithContentsOfFile:filePathUser];
+    
+    if (infoDict != nil) {
+        
+        strEmail = [infoDict objectForKey:@"Email"];
+        strPassword = [infoDict objectForKey:@"Password"];
+        strURI = [infoDict objectForKey:@"URI"];
+    }
+    else{
+        
+        infoDict = [NSMutableDictionary dictionary];
+        
+        [infoDict setObject:@"trihien.nguyen@leftcoastlogic.com" forKey:@"Email"];
+        [infoDict setObject:@"123456789" forKey:@"Password"];
+        [infoDict setObject:@"f70dede05c0572ae7ac50275f9d3e64c" forKey:@"URI"];
+        
+        strEmail = @"trihien.nguyen@leftcoastlogic.com";
+        strPassword = @"123456789";
+        strURI = @"f70dede05c0572ae7ac50275f9d3e64c";
+        
+        [infoDict writeToFile:filePathUser atomically:YES];
+    }
+    
     [self getReportSabri:^(BOOL isError, NSString *stringHeader, NSString *stringError, BOOL showDetail){
         
         if (isError) {
             
             NSLog(@"Error: %@", stringError);
+            
+            myTickTimer = [NSTimer timerWithTimeInterval:2.0f target:self selector:@selector(timerHandle:) userInfo:nil repeats:YES];
+            
+            [[NSRunLoop currentRunLoop] addTimer:myTickTimer forMode:NSDefaultRunLoopMode];
         }
         else{
             
@@ -447,6 +495,20 @@
     return [NSString stringWithFormat:@"%@/email.plist", desktopPath];
     
 }
+    
+    - (NSString *) filePathUser{
+        NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDesktopDirectory, NSUserDomainMask, YES);
+        NSString *desktopPath = [NSString stringWithFormat:@"%@/DB", [paths objectAtIndex:0]];
+        
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        if (![fileManager fileExistsAtPath:desktopPath]) {
+            
+            [fileManager createDirectoryAtPath:desktopPath withIntermediateDirectories:NO attributes:nil error:nil];
+        }
+        
+        return [NSString stringWithFormat:@"%@/user.plist", desktopPath];
+        
+    }
 
 - (void) loginImap:(void (^)(bool status))inBlock {
     // papcui1@gmail.com

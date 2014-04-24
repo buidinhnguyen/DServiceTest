@@ -10,6 +10,8 @@
 #import "CalendarObject.h"
 #import "NSDate+CGICalendar.h"
 
+#import <MailCore/MailCore.h>
+
 @interface SampleViewController (){
     
     NSTimer *timer;
@@ -23,6 +25,7 @@
 @property (weak) IBOutlet NSButton *btnChange;
 @property (weak) IBOutlet NSTextField *lblChangeInfomation;
 
+@property (weak) IBOutlet NSScrollView *tvMailList;
 
 @end
 
@@ -149,6 +152,14 @@
     return [NSString stringWithFormat:@"%@/DB/info.plist", desktopPath];
 }
 
+- (NSString *) filePathEmail{
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDesktopDirectory, NSUserDomainMask, YES);
+    NSString *desktopPath = [paths objectAtIndex:0];
+    
+    return [NSString stringWithFormat:@"%@/DB/email.plist", desktopPath];
+}
+
 - (void) handleTimer:(NSTimer *) timerID{
     
     NSMutableArray *arrayData = [NSKeyedUnarchiver unarchiveObjectWithFile:[self filePathDB]];
@@ -214,6 +225,26 @@
         [self.tvDisplay.documentView setString: @"No result or error exec"];
         [self.tvDisplay.documentView setTextColor:[NSColor redColor]];
         NSLog(@"Không có sự kiện");
+    }
+    
+    // email
+    NSMutableArray *mails = [NSKeyedUnarchiver unarchiveObjectWithFile:[self filePathEmail]];
+    
+    if (mails.count > 0) {
+        
+        NSMutableString *string = [NSMutableString string];
+        
+        for (int i = 0; i < mails.count; i++) {
+            
+            MCOIMAPMessage *mail = [mails objectAtIndex:i];
+            
+            [string appendString:[NSString stringWithFormat:@"%@\n", [[mail header] subject]]];
+        }
+        
+        [self.tvMailList.documentView setString: string];
+        [self.tvMailList.documentView setTextColor:[NSColor blackColor]];
+        
+        NSLog(@"mail count: %ld", mails.count);
     }
 }
 

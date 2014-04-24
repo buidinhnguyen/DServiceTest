@@ -19,6 +19,8 @@
 		7746EC6018FCD3F000A4FCEA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7746EC5E18FCD3F000A4FCEA /* InfoPlist.strings */; };
 		7746EC6218FCD3F000A4FCEA /* DSTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7746EC6118FCD3F000A4FCEA /* DSTestTests.m */; };
 		7746EC8B18FE57EB00A4FCEA /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7746EC8A18FE57EB00A4FCEA /* EventKit.framework */; };
+		777F6D391908C42D0045C22E /* libMailCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 777F6D371908C42D0045C22E /* libMailCore.a */; };
+		777F6D3A1908C42D0045C22E /* MailCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 777F6D381908C42D0045C22E /* MailCore.framework */; };
 		7797765D18FE624100A1AB8B /* CGICalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7797764E18FE624100A1AB8B /* CGICalendar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7797765E18FE624100A1AB8B /* CGICalendarComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7797765018FE624100A1AB8B /* CGICalendarComponent.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7797765F18FE624100A1AB8B /* CGICalendarContentLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 7797765218FE624100A1AB8B /* CGICalendarContentLine.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -84,6 +86,8 @@
 		7746EC5F18FCD3F000A4FCEA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7746EC6118FCD3F000A4FCEA /* DSTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSTestTests.m; sourceTree = "<group>"; };
 		7746EC8A18FE57EB00A4FCEA /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		777F6D371908C42D0045C22E /* libMailCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMailCore.a; path = "../../../Library/Developer/Xcode/DerivedData/DSTest-crzwupltsepdqdazkowhphveqrzk/Build/Products/Debug/libMailCore.a"; sourceTree = "<group>"; };
+		777F6D381908C42D0045C22E /* MailCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MailCore.framework; path = "../../../Library/Developer/Xcode/DerivedData/DSTest-crzwupltsepdqdazkowhphveqrzk/Build/Products/Debug/MailCore.framework"; sourceTree = "<group>"; };
 		7797764D18FE624100A1AB8B /* CGICalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGICalendar.h; sourceTree = "<group>"; };
 		7797764E18FE624100A1AB8B /* CGICalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGICalendar.m; sourceTree = "<group>"; };
 		7797764F18FE624100A1AB8B /* CGICalendarComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGICalendarComponent.h; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				777F6D391908C42D0045C22E /* libMailCore.a in Frameworks */,
+				777F6D3A1908C42D0045C22E /* MailCore.framework in Frameworks */,
 				7746EC8B18FE57EB00A4FCEA /* EventKit.framework in Frameworks */,
 				7746EC3818FCD3F000A4FCEA /* Cocoa.framework in Frameworks */,
 			);
@@ -173,6 +179,8 @@
 		7746EC3618FCD3F000A4FCEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				777F6D371908C42D0045C22E /* libMailCore.a */,
+				777F6D381908C42D0045C22E /* MailCore.framework */,
 				7746EC8A18FE57EB00A4FCEA /* EventKit.framework */,
 				7746EC3718FCD3F000A4FCEA /* Cocoa.framework */,
 				7746EC5618FCD3F000A4FCEA /* XCTest.framework */,
@@ -554,6 +562,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/DSTest-crzwupltsepdqdazkowhphveqrzk/Build/Products/Debug",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DSTest/DSTest-Prefix.pch";
 				INFOPLIST_FILE = "DSTest/DSTest-Info.plist";
@@ -569,6 +581,7 @@
 					"/Users/lcl109/Documents/Working/DServiceTest/mailcore2/Externals/libsasl-ios/lib",
 					"/Users/lcl109/Documents/Working/DServiceTest/mailcore2/Externals/libsasl-ios/lib/sasl2",
 					"/Users/lcl109/Documents/Working/DServiceTest/mailcore2/Externals/tidy-html5-ios/lib",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/DSTest-crzwupltsepdqdazkowhphveqrzk/Build/Products/Debug",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -581,6 +594,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/DSTest-crzwupltsepdqdazkowhphveqrzk/Build/Products/Debug",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DSTest/DSTest-Prefix.pch";
 				INFOPLIST_FILE = "DSTest/DSTest-Info.plist";
@@ -596,6 +613,7 @@
 					"/Users/lcl109/Documents/Working/DServiceTest/mailcore2/Externals/libsasl-ios/lib",
 					"/Users/lcl109/Documents/Working/DServiceTest/mailcore2/Externals/libsasl-ios/lib/sasl2",
 					"/Users/lcl109/Documents/Working/DServiceTest/mailcore2/Externals/tidy-html5-ios/lib",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/DSTest-crzwupltsepdqdazkowhphveqrzk/Build/Products/Debug",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

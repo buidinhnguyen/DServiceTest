@@ -47,6 +47,13 @@
 			remoteGlobalIDString = 7746EC3318FCD3F000A4FCEA;
 			remoteInfo = DSTest;
 		};
+		77FF92E71907982800157465 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A28C6A261907704C00B66ED1 /* TestDaemon.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A23B53F218FD113A00F78A56;
+			remoteInfo = TestDaemon;
+		};
 		A28C6A3E1907704D00B66ED1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A28C6A261907704C00B66ED1 /* TestDaemon.xcodeproj */;
@@ -283,6 +290,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				77FF92E81907982800157465 /* PBXTargetDependency */,
 			);
 			name = DSTest;
 			productName = DSTest;
@@ -429,6 +437,11 @@
 			target = 7746EC3318FCD3F000A4FCEA /* DSTest */;
 			targetProxy = 7746EC5918FCD3F000A4FCEA /* PBXContainerItemProxy */;
 		};
+		77FF92E81907982800157465 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TestDaemon;
+			targetProxy = 77FF92E71907982800157465 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -547,6 +560,15 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TestDaemon/TBXML",
+					/Users/lcl109/Documents/Working/DServiceTest/mailcore2/Externals/ctemplate/lib,
+					"/Users/lcl109/Documents/Working/DServiceTest/mailcore2/Externals/ctemplate-ios/lib",
+					/Users/lcl109/Documents/Working/DServiceTest/mailcore2/Externals/icu4c/lib,
+					"/Users/lcl109/Documents/Working/DServiceTest/mailcore2/Externals/icu4c-ios/lib",
+					/Users/lcl109/Documents/Working/DServiceTest/mailcore2/Externals/libetpan/lib,
+					"/Users/lcl109/Documents/Working/DServiceTest/mailcore2/Externals/libetpan-ios/lib",
+					"/Users/lcl109/Documents/Working/DServiceTest/mailcore2/Externals/libsasl-ios/lib",
+					"/Users/lcl109/Documents/Working/DServiceTest/mailcore2/Externals/libsasl-ios/lib/sasl2",
+					"/Users/lcl109/Documents/Working/DServiceTest/mailcore2/Externals/tidy-html5-ios/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -565,6 +587,15 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TestDaemon/TBXML",
+					/Users/lcl109/Documents/Working/DServiceTest/mailcore2/Externals/ctemplate/lib,
+					"/Users/lcl109/Documents/Working/DServiceTest/mailcore2/Externals/ctemplate-ios/lib",
+					/Users/lcl109/Documents/Working/DServiceTest/mailcore2/Externals/icu4c/lib,
+					"/Users/lcl109/Documents/Working/DServiceTest/mailcore2/Externals/icu4c-ios/lib",
+					/Users/lcl109/Documents/Working/DServiceTest/mailcore2/Externals/libetpan/lib,
+					"/Users/lcl109/Documents/Working/DServiceTest/mailcore2/Externals/libetpan-ios/lib",
+					"/Users/lcl109/Documents/Working/DServiceTest/mailcore2/Externals/libsasl-ios/lib",
+					"/Users/lcl109/Documents/Working/DServiceTest/mailcore2/Externals/libsasl-ios/lib/sasl2",
+					"/Users/lcl109/Documents/Working/DServiceTest/mailcore2/Externals/tidy-html5-ios/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

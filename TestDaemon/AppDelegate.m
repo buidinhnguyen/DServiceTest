@@ -12,13 +12,24 @@
 #import "TBXML.h"
 #import "CalendarObject.h"
 
+#import "NSTimer+Blocks.h"
+#import <MailCore/MailCore.h>
+
 @interface AppDelegate(){
     
     NSTimer *myTickTimer;
     TBXML *tbXML;
     CalendarObject *calendarObejct;
     NSMutableArray *arrayCalendar;
+    MCOIMAPFetchMessagesOperation * op;
 }
+
+@property (nonatomic, copy) NSString *login;
+@property (nonatomic, copy) NSString *hostname;
+@property (nonatomic, copy) NSString *password;
+
+@property (nonatomic, retain) MCOIMAPSession *session;
+@property (nonatomic, retain) MCOIMAPOperation *checkOp;
 
 @property (nonatomic, strong) NSMutableArray *arrayData;
 @property (nonatomic, strong) NSMutableDictionary *dicData;
@@ -292,6 +303,8 @@
     
 	if ((self = [super init])){
         
+        NSLog(@"init coiiiiii");
+        
 		[self performSelector:@selector(setup) withObject:self afterDelay:0.5f];
 		
 		return self;
@@ -336,6 +349,73 @@
     myTickTimer = [NSTimer timerWithTimeInterval:5.0f target:self selector:@selector(timerHandle:) userInfo:nil repeats:YES];
     
 	[[NSRunLoop currentRunLoop] addTimer:myTickTimer forMode:NSDefaultRunLoopMode];
+    
+    // login to imap server
+    [self loginImap:^(bool status){
+        if(!status) {
+            NSLog(@"login IMap failed");
+            return;
+        }
+        
+        [self getEmailData];
+    }];
+}
+
+- (void) getEmailData {
+    __block BOOL isGetting = NO;
+    
+    [NSTimer scheduledTimerWithTimeInterval:5.0 block:^
+     {
+         if(!isGetting) {
+             isGetting = YES;
+             __block NSMutableArray *data = [NSMutableArray array];
+             
+             self.session = [[MCOIMAPSession alloc] init];
+             [self.session setHostname:self.hostname];
+             [self.session setPort:993];
+             
+             
+             [self.session setUsername:self.login];
+             [self.session setPassword:self.password];
+             
+             [_session setConnectionType:MCOConnectionTypeTLS];
+             
+             // xu ly email:
+             // get email
+             MCOIMAPMessagesRequestKind requestKind = (MCOIMAPMessagesRequestKind)
+             (MCOIMAPMessagesRequestKindHeaders | MCOIMAPMessagesRequestKindStructure |
+              MCOIMAPMessagesRequestKindInternalDate | MCOIMAPMessagesRequestKindHeaderSubject |
+              MCOIMAPMessagesRequestKindFlags);
+             
+             op = [_session fetchMessagesByUIDOperationWithFolder:@"INBOX" requestKind:requestKind uids:[MCOIndexSet indexSetWithRange:MCORangeMake(1, UINT64_MAX)]];
+             [op setProgress:^(unsigned int current){
+                 //NSLog(@"progress: %u", current);
+             }];
+             [op start:^(NSError * error, NSArray * messages, MCOIndexSet * vanishedMessages) {
+                 // Sort the messages with the most recent first.
+                 //NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"header.date" ascending:NO];
+                 //data = [messages sortedArrayUsingDescriptors:@[sort]];
+                 
+                 NSLog(@"error: %@", error);
+                 NSLog(@"%i messages", (int) [messages count]);
+                 //NSLog(@"%@", _messages);
+                 
+                 for (MCOIMAPMessage * msg in messages) {
+                     [data addObject:msg];
+                     
+                     NSLog(@"message: %@", [[msg header] subject]);
+                 }
+                 
+                 // parse email
+                 // save to local
+                 // tick tiep...
+                 BOOL success = [NSKeyedArchiver archiveRootObject:data toFile:[self filePathEmail]];
+                 if(success)
+                     isGetting = NO;
+             }];
+         }
+     }
+                                    repeats:YES];
 }
 
 - (NSString *) filePathDB{
@@ -351,6 +431,67 @@
     
     return [NSString stringWithFormat:@"%@/info.plist", desktopPath];
     
+}
+
+- (NSString *) filePathEmail{
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDesktopDirectory, NSUserDomainMask, YES);
+    NSString *desktopPath = [NSString stringWithFormat:@"%@/DB", [paths objectAtIndex:0]];
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if (![fileManager fileExistsAtPath:desktopPath]) {
+        
+        [fileManager createDirectoryAtPath:desktopPath withIntermediateDirectories:NO attributes:nil error:nil];
+    }
+    
+    return [NSString stringWithFormat:@"%@/email.plist", desktopPath];
+    
+}
+
+- (void) loginImap:(void (^)(bool status))inBlock {
+    // papcui1@gmail.com
+    // 1234@cuimia
+    self.login = @"papcui1@gmail.com";
+    self.password = @"1234@cuimia";
+    self.hostname = @"imap.gmail.com";
+    
+    self.session = [[MCOIMAPSession alloc] init];
+    [self.session setHostname:self.hostname];
+    [self.session setPort:993];
+    
+    
+        [self.session setUsername:self.login];
+        [self.session setPassword:self.password];
+    
+    [self.session setConnectionType:MCOConnectionTypeTLS];
+    self.checkOp = [self.session checkAccountOperation];
+	self.session.connectionLogger = ^(void * connectionID, MCOConnectionLogType type, NSData * data) {
+        if (type != MCOConnectionLogTypeSentPrivate) {
+            NSLog(@"event logged:%p %i withData: %@", connectionID, type, [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+        }
+    };
+	
+	NSLog(@"start op");
+    [self.checkOp start:^(NSError * error) {
+		[self willChangeValueForKey:@"loggingIn"];
+        
+        self.checkOp = nil;
+        self.session = nil;
+		
+		[self didChangeValueForKey:@"loggingIn"];
+		
+		NSLog(@"op done (error: %@)", error);
+		//if (error != nil)
+		//	[_accountWindow makeKeyAndOrderFront:nil];
+        //[_msgListViewController connectWithHostname:self.hostname login:self.login password:self.password oauth2Token:self.oauth2Token];
+        
+        if(error!=nil) {
+            inBlock(false);
+        }
+        else {
+            inBlock(true);
+        }
+	}];
 }
 
 @end
